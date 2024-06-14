@@ -16,7 +16,7 @@ int main()
 
     // Convert angles from radians to degrees
     angle1 = angle1 * 180 / M_PI;
-    angle2 = angle2 * 180 / M_PI;  
+    angle2 = angle2 * 180 / M_PI;
     angle3 = angle3 * 180 / M_PI;
 
     cout << fixed << setprecision(2) << endl;
