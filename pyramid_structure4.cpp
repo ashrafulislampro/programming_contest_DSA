@@ -1,3 +1,4 @@
+
 #include <iostream>
 
 using namespace std;
@@ -13,12 +14,12 @@ int main()
 
             if ((j < 2 && i == 0) || (j > 2 && i == 0) || (j == 0 && i == 1) || (j == 4 && i == 1))
             {
-                printf(".");
+                cout << ".";
                 continue;
             }
-            printf("*");
+            cout << "*";
         }
-        printf("\n");
+        cout << endl;
     }
     return 0;
 }
