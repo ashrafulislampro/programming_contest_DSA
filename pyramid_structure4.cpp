@@ -22,27 +22,20 @@ int main()
             // Handle first row (i == 0)
             if (i == 0)
             {
-                // cout << " Test = " << temp;
-                int res = (j <= 2) ? (j + 1) : (j - temp);
-                temp += 2;
+
+                int res = (j <= 2) ? (j + 1) : j - temp;
+                if (j > 2)
+                {
+                    temp += 2;
+                }
                 if (res < 1)
                 {
                     break;
                 }
 
                 cout << res;
-                // cout << " Test : " << temp;
             }
-            // if (i == 0)
-            // {
-            //     int res = (j <= 2) ? (j + 1) : (j - temp);
-            //     temp += 2;
-            //     if (res < 1)
-            //     {
-            //         break;
-            //     }
-            //     cout << res;
-            // }
+
             // Handle second row (i == 1)
             else if (i == 1 && (j > 0 && j < 4))
             {
