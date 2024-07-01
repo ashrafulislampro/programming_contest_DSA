@@ -1,0 +1,60 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int i, j;
+
+    for (i = 0; i < 5; i++)
+    {
+        int temp = 1;
+        for (j = 0; j < 5; j++)
+        {
+
+            // Handle special cases first
+            if ((j < 2 && i == 0) || (j > 2 && i == 0) || (j == 0 && i == 1) || (j == 4 && i == 1) || (j == 0 && i == 3) || (j == 4 && i == 3) || (j < 2 && i == 4) || (j > 2 && i == 4))
+            {
+                cout << ".";
+                continue;
+            }
+
+            // Handle first row (i == 0, 4)
+            else if ((i == 0 || i == 4) && j == 2)
+            {
+                cout << 1;
+            }
+            // Handle first row (i == 2)
+            else if (i == 2)
+            {
+
+                int res = (j <= 2) ? (j + 1) : j - temp;
+                if (j > 2)
+                {
+                    temp += 2;
+                }
+                if (res < 1)
+                {
+                    break;
+                }
+
+                cout << res;
+            }
+
+            // Handle second row (i == 1, 3)
+            else if ((i == 1 || i == 3) && (j > 0 && j < 4))
+            {
+                int res = (j <= 2) ? j : 1;
+                cout << res;
+            }
+            else
+            {
+                cout << ".";
+            }
+        }
+        temp = 1;
+        cout << endl;
+    }
+
+    return 0;
+}
